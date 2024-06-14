@@ -1,0 +1,25 @@
+<div class="blood-details" *ngIf="bloodDetails.length > 0">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Mobile Number</th>
+      <th>Blood Group</th>
+      <th>Address</th>
+      <th>Place of Donation</th>
+      <th>Hospital Name</th>
+      <th>Donation Date</th>
+    </tr>
+    <tr *ngFor="let detail of bloodDetails">
+      <td>{{ detail.name }}</td>
+      <td>{{ detail.mobileNumber }}</td>
+      <td>{{ detail.bloodgroup }}</td>
+      <td>{{ detail.address }}</td>
+      <td>{{ detail.placeOfDonation }}</td>
+      <td>{{ detail.hospitalName }}</td>
+      <td>{{ detail.donationDate | date:'mediumDate' }}</td>
+    </tr>
+  </table>
+</div>
+<div *ngIf="bloodDetails.length === 0">
+  <p>No blood details available.</p>
+</div>

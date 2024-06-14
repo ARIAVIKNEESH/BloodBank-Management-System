@@ -1,0 +1,17 @@
+/* details.component.css */
+h1 {
+    color: #343a40;
+    text-align: center;
+  }
+  
+  .details-container {
+    background-color: #ffffff;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .details-container h2 {
+    margin-top: 0;
+  }
+  

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Laboratory Details</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <section class="blog">
+        <h1>Laboratory Details</h1>
+        <div class="lab-details">
+            <div class="lab-item" id="microscope">
+                <img src="../../assets/microscope.jpg" alt="Microscope">
+                <div class="lab-description">
+                    <h2>Microscope</h2>
+                    <p class="partial-content">A microscope is an essential tool in a laboratory for viewing objects that are too small to be seen by the naked eye. It is used for various purposes, including examining cells, tissues, and microorganisms. <a href="#" class="see-more-link">See More</a></p>
+                    <p class="full-content hidden">Microscopes come in different types, such as optical microscopes, electron microscopes, and fluorescence microscopes, each with its specific applications and magnification capabilities. They are widely used in biological research, medical diagnostics, and material analysis.</p>
+                </div>
+            </div>
+            <div class="lab-item" id="centrifuge">
+                <img src="../../assets/Centrifuge.jpg" alt="Centrifuge">
+                <div class="lab-description">
+                    <h2>Centrifuge</h2>
+                    <p class="partial-content">A centrifuge is a machine that spins samples at high speeds to separate components based on density. It is commonly used in laboratories for separating blood components, isolating DNA, and purifying samples. <a href="#" class="see-more-link">See More</a></p>
+                    <p class="full-content hidden">Centrifuges are available in various configurations, including benchtop centrifuges, refrigerated centrifuges, and ultracentrifuges, each suitable for different applications and volumes of samples. They are essential equipment in biological and clinical laboratories.</p>
+                </div>
+            </div>
+            <div class="lab-item" id="incubator">
+                <img src="../../assets/Incubator.jpg" alt="Incubator">
+                <div class="lab-description">
+                    <h2>Incubator</h2>
+                    <p class="partial-content">An incubator provides a controlled environment for the growth and maintenance of microbiological cultures or cell cultures. It is used for various applications, including bacterial culture, cell culture, and biochemical assays. <a href="#" class="see-more-link">See More</a></p>
+                    <p class="full-content hidden">Incubators maintain specific temperature, humidity, and CO2 levels to support cell growth and proliferation. They are essential equipment in biology, microbiology, and tissue culture laboratories.</p>
+                </div>
+            </div>
+            <div class="lab-item" id="spectrophotometer">
+                <img src="../../assets/Spectrophotometer.jpg" alt="Spectrophotometer">
+                <div class="lab-description">
+                    <h2>Spectrophotometer</h2>
+                    <p class="partial-content">A spectrophotometer is a scientific instrument used to measure the intensity of light at various wavelengths. It is commonly used in laboratories for quantitative analysis of substances, including DNA, proteins, and chemicals. <a href="#" class="see-more-link">See More</a></p>
+                    <p class="full-content hidden">Spectrophotometers are available in different types, such as UV-visible spectrophotometers, fluorescence spectrophotometers, and infrared spectrophotometers, each suitable for specific applications in research, quality control, and environmental analysis. They are indispensable tools in molecular biology, biochemistry, and analytical chemistry.</p>
+                </div>
+            </div>
+            <div class="lab-item" id="autoclave">
+                <img src="../../assets/Autoclave.jpg" alt="Autoclave">
+                <div class="lab-description">
+                    <h2>Autoclave</h2>
+                    <p class="partial-content">An autoclave is a device used in laboratories for sterilizing equipment and supplies by subjecting them to high-pressure saturated steam at elevated temperatures. It is essential for preventing contamination and ensuring the safety of laboratory procedures. <a href="#" class="see-more-link">See More</a></p>
+                    <p class="full-content hidden">Autoclaves are available in various sizes and configurations, including benchtop autoclaves, vertical autoclaves, and horizontal autoclaves, each suitable for different types of materials and volumes of sterilization. They are commonly used in microbiology, medical, and research laboratories.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var seeMoreLinks = document.querySelectorAll('.see-more-link');
+            seeMoreLinks.forEach(function(link) {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var labItem = this.closest('.lab-item');
+                    var fullContent = labItem.querySelector('.full-content');
+                    fullContent.classList.toggle('hidden');
+                    if (fullContent.classList.contains('hidden')) {
+                        this.textContent = 'See More';
+                    } else {
+                        this.textContent = 'See Less';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

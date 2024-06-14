@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #eef2f7;
+}
+
+.hero {
+    background-color: #d32f2f;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: white;
+    color: #d32f2f;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.cta-button:hover {
+    background-color: #e57373;
+    color: white;
+}
+
+.about, .services, .more-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about h2, .services h2, .more-content h2 {
+    color: #d32f2f;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.about p, .more-content p {
+    font-size: 1.1em;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.info-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    overflow: hidden;
+    text-align: center;
+    width: 300px;
+}
+
+.info-item img {
+    max-width: 100%;
+    border-bottom: 2px solid #d32f2f;
+}
+
+.info-text {
+    padding: 20px;
+}
+
+.info-text h3 {
+    color: #d32f2f;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.info-text p {
+    color: #555;
+    font-size: 1em;
+}
+
+.service-item {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.service-item h3 {
+    color: #d32f2f;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    color: #555;
+    font-size: 1em;
+}
+
+.more-content.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #d32f2f;
+    color: white;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}

@@ -1,0 +1,57 @@
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" style="max-width: 400px; margin: 50px auto; padding: 20px; background: #f9f9f9; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; border-left: 5px solid #5cb85c;">
+    <label for="username" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;">Username:</label>
+    <input id="username" formControlName="username" type="text" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; display: block; transition: border-color 0.3s ease, box-shadow 0.3s ease;">
+    <div *ngIf="registerForm.get('username')?.invalid && registerForm.get('username')?.touched" style="color: red; font-size: 14px;">
+      Username is required.
+    </div>
+  
+    <label for="password" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;">Password:</label>
+    <input id="password" formControlName="password" type="password" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; display: block; transition: border-color 0.3s ease, box-shadow 0.3s ease;">
+    <div *ngIf="registerForm.get('password')?.invalid && registerForm.get('password')?.touched" style="color: red; font-size: 14px;">
+      Password is required.
+    </div>
+  
+    <label for="bloodgroup" style="display: block; margin-bottom: 8px; font-weight: bold; color: #333;">Blood Group:</label>
+    <select id="bloodgroup" formControlName="bloodgroup" style="width: calc(100% - 20px); padding: 10px; margin-bottom: 20px; border: 1px solid #ddd; border-radius: 5px; display: block; transition: border-color 0.3s ease, box-shadow 0.3s ease;">
+      <option value="">Select Blood Group</option>
+      <option *ngFor="let bg of bloodGroups" [value]="bg">{{ bg }}</option>
+    </select>
+    <div *ngIf="registerForm.get('bloodgroup')?.invalid && registerForm.get('bloodgroup')?.touched" style="color: red; font-size: 14px;">
+      Blood group is required.
+    </div>
+  
+    <button type="submit" [disabled]="registerForm.invalid" style="width: 100%; padding: 12px; background-color: #5cb85c; border: none; border-radius: 5px; color: #fff; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">
+      Register
+    </button>
+    <div *ngIf="registrationError" class="error" style="color: #d9534f; background: #f2dede; padding: 10px; border: 1px solid #ebccd1; border-radius: 5px; margin-top: 10px;">
+      {{ registrationError }}
+    </div>
+    <div *ngIf="registrationSuccess" class="success" style="color: #5cb85c; background: #dff0d8; padding: 10px; border: 1px solid #d6e9c6; border-radius: 5px; margin-top: 10px;">
+      {{ registrationSuccess }}
+    </div>
+  </form>
+  
+  <style>
+    input[type="text"]:focus, input[type="password"]:focus, select:focus {
+      border-color: #5cb85c;
+      box-shadow: 0 0 8px rgba(92, 184, 92, 0.5);
+      outline: none;
+    }
+  
+    button:hover:not(:disabled) {
+      background-color: #4cae4c;
+    }
+  
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  
+    @media (max-width: 600px) {
+      form {
+        width: 90%;
+        margin: 20px auto;
+      }
+    }
+  </style>
+  

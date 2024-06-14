@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f6f6f6;
+}
+
+.blog {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.lab-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.lab-item {
+    margin-bottom: 40px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.lab-item img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lab-description {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.lab-description h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.lab-description p {
+    color: #666;
+    line-height: 1.6;
+}

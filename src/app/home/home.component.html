@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Bank Management System</title>
+    <link rel="stylesheet" href="home.component.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Welcome to the Blood Bank Management System</h1>
+            <p>Your blood donation can save lives. Join us in making a difference.</p>
+            <button class="cta-button" onclick="toggleLearnMore()">Learn More</button>
+        </div>
+    </section>
+
+    <section class="about">
+        <h2>About Us</h2>
+        <p>Our mission is to ensure the safe and adequate supply of blood to those in need. We manage blood donations, maintain a database of donors, and organize blood donation camps. Together, we can save lives.</p>
+    </section>
+
+    <section class="info">
+        <div class="info-item">
+            <img src="../../assets/home1.jpg" alt="Blood Donation">
+            <div class="info-text">
+                <h3>Donate Blood</h3>
+                <p>Find out how you can donate blood and make a difference.</p>
+            </div>
+        </div>
+        <div class="info-item">
+            <img src="../../assets/home2.jpg" alt="Blood Camp">
+            <div class="info-text">
+                <h3>Blood Donation Camps</h3>
+                <p>Join our blood donation camps and help save lives.</p>
+            </div>
+        </div>
+        <div class="info-item">
+            <img src="../../assets/home3.jpg" alt="Volunteer">
+            <div class="info-text">
+                <h3>Volunteer</h3>
+                <p>Become a volunteer and contribute to our mission.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Blood Collection</h3>
+            <p>We organize blood collection drives at various locations to ensure a steady supply of blood.</p>
+        </div>
+        <div class="service-item">
+            <h3>Blood Storage</h3>
+            <p>Our state-of-the-art facilities ensure that donated blood is stored safely and efficiently.</p>
+        </div>
+        <div class="service-item">
+            <h3>Blood Distribution</h3>
+            <p>We ensure timely distribution of blood to hospitals and patients in need.</p>
+        </div>
+    </section>
+
+    <section id="more-content" class="more-content hidden">
+        <h2>Extended Information</h2>
+        <p>Our Blood Bank Management System (BBMS) ensures the efficient management of blood donation and distribution processes. We are dedicated to saving lives by providing safe and reliable blood services. Our extended services include:</p>
+        <ul>
+            <li><b>Advanced Screening:</b> Ensuring the highest quality of blood through rigorous screening processes.</li>
+            <li><b>Community Outreach:</b> Engaging with the community to raise awareness and increase blood donation.</li>
+            <li><b>Emergency Response:</b> Rapid response to emergency blood needs through a well-coordinated network.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Blood Bank Management System. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleLearnMore() {
+            const moreContent = document.getElementById('more-content');
+            if (moreContent.classList.contains('hidden')) {
+                moreContent.classList.remove('hidden');
+                document.querySelector('.cta-button').innerText = 'Show Less';
+            } else {
+                moreContent.classList.add('hidden');
+                document.querySelector('.cta-button').innerText = 'Learn More';
+            }
+        }
+    </script>
+</body>
+</html>

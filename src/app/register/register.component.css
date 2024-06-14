@@ -1,0 +1,13 @@
+/* Specific styling for the register form */
+form {
+    border-left: 5px solid #5cb85c;
+  }
+  
+  button {
+    background-color: #5cb85c;
+  }
+  
+  button:hover:not(:disabled) {
+    background-color: #4cae4c;
+  }
+  
